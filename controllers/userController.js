@@ -194,3 +194,7 @@ exports.updateItemRating = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+exports.ping = catchAsync(async (req, res, next) => {
+  return res.status(200).json({ message: "Server is live" });
+});

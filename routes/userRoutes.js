@@ -9,6 +9,8 @@ router.post("/login", authController.login);
 
 router.post("/autoLogin", authController.protect, authController.autoLogin);
 
+router.get("/ping", userController.ping);
+
 router
   .route("/")
   .get(authController.protect, userController.getAllUsers)
